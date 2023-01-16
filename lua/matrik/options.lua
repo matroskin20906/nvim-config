@@ -8,6 +8,7 @@ local options = {
    nowrap = off,
    smartcase = true,
    incsearch = true,
+   showmode = false,
 }
 
 for k, v in pairs(options) do
