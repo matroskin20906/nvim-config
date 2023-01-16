@@ -6,8 +6,8 @@ lsp.ensure_installed({
   'tsserver',
   'eslint',
   'sumneko_lua',
+  'phpactor',
   'jdtls',
-  'psalm',
 })
 
 -- Fix Undefined global 'vim'
@@ -20,7 +20,6 @@ lsp.configure('sumneko_lua', {
         }
     }
 })
-
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -51,6 +50,9 @@ lsp.set_preferences({
 })
 
 lsp.on_attach(function(client, bufnr)
+  if bufnr == nil then
+      return
+  end
   local opts = {buffer = bufnr, remap = false}
 
   if client.name == "eslint" then
