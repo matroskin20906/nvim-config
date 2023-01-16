@@ -40,17 +40,18 @@ packer.init({
 
 return packer.startup(function(use)
    use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
-   use { "gruvbox-community/gruvbox" }
-   use { "nvim-treesitter/nvim-treesitter" }
-   use { "https://github.com/preservim/nerdtree" }
-   use { "nvim-telescope/telescope.nvim" }
-   use { "https://github.com/vim-airline/vim-airline" }
+   use { "gruvbox-community/gruvbox" } -- colorscheme
+   use { "nvim-treesitter/nvim-treesitter" } -- Treesitter
+   use { "https://github.com/preservim/nerdtree" } -- NERDTree
+   use { "nvim-telescope/telescope.nvim" } -- Telescope
+   use { "https://github.com/vim-airline/vim-airline" } -- Used for great status bar
    use { "nvim-lua/popup.nvim" }
    use { "nvim-lua/plenary.nvim" }
-   use { "mhinz/vim-signify" }
+   use { "mhinz/vim-signify" } -- work with git
    use { "tpope/vim-fugitive" }
    use { "tpope/vim-rhubarb" }
    use { "junegunn/gv.vim" }
+   use { "yifeikong/vim-sync" } -- Automatically send changes to remote host
    use {
       'VonHeikemen/lsp-zero.nvim',
       requires = {
@@ -58,6 +59,7 @@ return packer.startup(function(use)
          {'neovim/nvim-lspconfig'},
          {'williamboman/mason.nvim'},
          {'williamboman/mason-lspconfig.nvim'},
+--         {'mfussenegger/nvim-jdtls'},
 
          -- Autocompletion
          {'hrsh7th/nvim-cmp'},
