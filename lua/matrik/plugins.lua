@@ -40,7 +40,9 @@ packer.init({
 
 return packer.startup(function(use)
    use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
-   use { "gruvbox-community/gruvbox" } -- colorscheme
+   use { "ThePrimeagen/vim-be-good" } -- Vim be good game for better vimming
+   use { "gruvbox-community/gruvbox" } -- colorscheme gruvbox
+   use { "catppuccin/nvim", as = "catppuccin" }
    use { "nvim-treesitter/nvim-treesitter" } -- Treesitter
    use { "https://github.com/preservim/nerdtree" } -- NERDTree
    use { "nvim-telescope/telescope.nvim" } -- Telescope
@@ -52,6 +54,7 @@ return packer.startup(function(use)
    use { "tpope/vim-rhubarb" }
    use { "junegunn/gv.vim" }
    use { "yifeikong/vim-sync" } -- Automatically send changes to remote host
+   use { "ThePrimeagen/harpoon" } -- harpoon
    use {
       'VonHeikemen/lsp-zero.nvim',
       requires = {

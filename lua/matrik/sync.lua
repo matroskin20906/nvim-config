@@ -1,6 +1,6 @@
 if (io.open(".vim-sync")) then
    vim.keymap.set("n", "<C-s>", ":call VSUploadFile()<CR>")
-   vim.keymap.set("n", "<C-d>", ":call VSDownloadFile()<CR>")
+   vim.keymap.set("n", "<C-x>", ":call VSDownloadFile()<CR>")
 
    local api = vim.api
 

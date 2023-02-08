@@ -4,3 +4,4 @@ vim.keymap.set("n", "<C-t>", ":NERDTreeToggle<CR>")
 
 vim.g.NERDTreeDirArrowExpandable = "+"
 vim.g.NERDTreeDirArrowCollapsible = "~"
+vim.g.NERDTreeShowHidden = 1

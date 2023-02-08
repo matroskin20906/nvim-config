@@ -1,7 +1,8 @@
 local options = {
    number = true,
+   relativenumber = true,
    tabstop = 4,
-   shiftwidth = 3,
+   shiftwidth = 4,
    scrolloff = 4,
    expandtab = true,
    noerrorbells = off,
@@ -9,6 +10,7 @@ local options = {
    smartcase = true,
    incsearch = true,
    showmode = false,
+   guicursor = "",
 }
 
 for k, v in pairs(options) do
