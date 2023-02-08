@@ -1,12 +1,12 @@
 if (io.open(".vim-sync")) then
-   vim.keymap.set("n", "<C-s>", ":call VSUploadFile()<CR>")
-   vim.keymap.set("n", "<C-x>", ":call VSDownloadFile()<CR>")
+    vim.keymap.set("n", "<C-s>", ":call VSUploadFile()<CR>")
+    vim.keymap.set("n", "<C-x>", ":call VSDownloadFile()<CR>")
 
-   local api = vim.api
+    local api = vim.api
 
-   -- go to last loc when opening a buffer
-   api.nvim_create_autocmd(
-   "BufWritePost",
-   { command = "call VSUploadFile()" }
-   )
+    -- go to last loc when opening a buffer
+    api.nvim_create_autocmd(
+    "BufWritePost",
+    { command = "call VSUploadFile()" }
+    )
 end
