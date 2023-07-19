@@ -42,7 +42,6 @@ return packer.startup(function(use)
    use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
    use { "ThePrimeagen/vim-be-good" } -- Vim be good game for better vimming
    use { "gruvbox-community/gruvbox" } -- colorscheme gruvbox
-   use { "catppuccin/nvim", as = "catppuccin" }
    use { "nvim-treesitter/nvim-treesitter" } -- Treesitter
    use { "https://github.com/preservim/nerdtree" } -- NERDTree
    use { "nvim-telescope/telescope.nvim" } -- Telescope
@@ -68,7 +67,7 @@ return packer.startup(function(use)
          {'hrsh7th/nvim-cmp'},
          {'hrsh7th/cmp-buffer'},
          {'hrsh7th/cmp-path'},
-         {'saadparwaiz1/cmp_luasnip'},
+             {'saadparwaiz1/cmp_luasnip'},
          {'hrsh7th/cmp-nvim-lsp'},
          {'hrsh7th/cmp-nvim-lua'},
 

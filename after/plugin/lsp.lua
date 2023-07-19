@@ -6,21 +6,9 @@ lsp.ensure_installed({
     'jsonls',
     'tsserver',
     'gopls',
-    'sumneko_lua',
     'phpactor',
     'jdtls',
     'clangd',
-})
-
--- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
 })
 
 local cmp = require('cmp')
@@ -53,11 +41,12 @@ lsp.set_preferences({
 
 local lspconfig = require("lspconfig")
 
-lspconfig.phpactor.setup {
-    settings = {
-        logging = {
-            enabled = { true }
-        }
+lspconfig.phpactor.setup{
+    on_attach = on_attach,
+    init_options = {
+        ["language_server_phpstan.enabled"] = false,
+        ["language_server_psalm.enabled"] = false,
+        ["logging.enabled"] = true,
     }
 }
 
